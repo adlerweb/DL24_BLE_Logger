@@ -9,6 +9,10 @@ Based on https://github.com/adlerweb/J7-C_UC96_BLE_Logger/
 
 Requires [gattlib](https://github.com/labapart/gattlib).
 
+### Warning
+
+Sadly there has been an API change with newer bluetooth adapters (HCI5) which [isn't supported by gattlib yet](https://github.com/oscaracena/pygattlib/issues/31). If you see a `Set scan parameters failed` error, your adapter may be using >=HCI5 and not be supported until the code has been ported to dbus/bluez or gattlib is updated.
+
 ## Usage
 
 Just start the script to show the measurements of the first found DL24 on screen.
